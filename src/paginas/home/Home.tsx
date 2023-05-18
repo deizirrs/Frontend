@@ -1,11 +1,12 @@
-import react from 'react'
+import { Typography } from '@mui/material';
+import react from 'react';
 
 function Home(){
     return (    
         <>
-        <h1>
+        <Typography>
             Home
-        </h1>
+        </Typography>
         </>
     )
 }
