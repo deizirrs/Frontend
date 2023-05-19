@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Box, createTheme, ThemeProvider, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css';
-
-const theme = createTheme({
-    typography: {
-        fontFamily: `"Indie Flower", cursive`,
-    },
-});
 
 function Navbar() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -25,8 +19,7 @@ function Navbar() {
         <>
             <AppBar position="static" style={{ backgroundColor: '#FF70CA' }}>
                 <Toolbar variant="dense">
-                    <ThemeProvider theme={theme}>
-                    <img src="src/assets/images/logo.png" alt="Logo ufa" width="130px" height="100px" />
+                    <img src="src/assets/images/logo.png" alt="Logo ufa" width="100px" height="100px" />
                         <Box marginLeft="auto">
                             <IconButton
                                 edge="end"
@@ -50,6 +43,11 @@ function Navbar() {
                                     <ListItem button>
                                         <ListItemText primary="Criar Postagem" />
                                     </ListItem>
+                                    <Link to="/sobre" className="text-decorator-none">
+                                        <ListItem button>
+                                            <ListItemText primary="Sobre" />
+                                        </ListItem>
+                                    </Link>
                                     <ListItem button>
                                         <ListItemText primary="Postagens" />
                                     </ListItem>
@@ -67,7 +65,6 @@ function Navbar() {
                                 </List>
                             </Drawer>
                         </Box>
-                    </ThemeProvider>
                 </Toolbar>
             </AppBar>
         </>
