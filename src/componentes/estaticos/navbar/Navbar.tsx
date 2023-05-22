@@ -58,6 +58,11 @@ function Navbar() {
                                     <ListItem button>
                                         <ListItemText primary="Cadastrar Temas" style={{ color: '#ff0054' }} />
                                     </ListItem>
+                                    <Link to="/contatos" className="text-decorator-none">
+                                        <ListItem button >
+                                            <ListItemText primary="Contatos" style={{ color: '#ff0054' }}/>
+                                        </ListItem>
+                                    </Link>
                                     <Link to="/login" className="text-decorator-none">
                                         <ListItem button>
                                             <ListItemText primary="Logout" style={{color: '#ff0054'}}/>
