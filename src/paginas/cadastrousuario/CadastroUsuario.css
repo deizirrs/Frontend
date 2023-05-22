@@ -7,15 +7,36 @@
     background-size: cover;
     background-position: center;
 
-    }
+}
 
-    .textoCadastro {
+
+
+.textoCadastro {
         font-weight: bold !important;
         color: #FF4D6D !important
-    }
+}
+
 .btnCadastrar{
     margin-right: 20px !important; 
+    border-color: white !important;
+    background-color: #ffb3c6 !important;
+    box-shadow: 3px 3px 7px #590D22;
+    color: #ff0054!important;
+    font-weight: bold !important;
 }
 .btnCancelar{
     margin-right: 20px !important;
+    border-color: white !important;
+    background-color: #ff0054 !important;
+    box-shadow: 3px 3px 7px #590D22;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.btnCancelar:hover{
+    background-color:#fb6f92 !important;
+}
+
+.btnCadastrar:hover{
+    background-color:#fb6f92 !important;
 }

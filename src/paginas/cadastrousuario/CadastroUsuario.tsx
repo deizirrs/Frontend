@@ -78,12 +78,12 @@ function CadastroUsuario() {
 
                         <Box marginTop={2} textAlign="center">
 
-                            <Button type='submit' variant='contained' color='primary' className='btnCadastrar'>
+                            <Button type='submit' variant='contained' className='btnCadastrar'>
                                 Cadastrar
                             </Button>
 
                             <Link to='/login'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
+                                <Button variant='contained' className='btnCancelar'>
                                     Cancelar
                                 </Button>
                             </Link>
