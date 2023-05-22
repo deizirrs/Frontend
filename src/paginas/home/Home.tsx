@@ -1,7 +1,5 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import react from 'react'
-import Imagem from '/images/testando.svg';
-import ImgTemas from '/images/temas.svg';
 import "./Home.css";
 
 function Home(){
@@ -20,7 +18,7 @@ function Home(){
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                <img src={Imagem} alt="logo" width="550px" height="300px" />
+                    <img src="../../../src/assets/images/imagem1.svg" alt="logo" width="550px" height="300px" />
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
@@ -39,7 +37,7 @@ function Home(){
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                <img src={ImgTemas} alt="logo" width="550px" height="300px" />
+                    <img src="../../../src/assets/images/imagem2.svg" alt="logo" width="550px" height="300px" />
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
