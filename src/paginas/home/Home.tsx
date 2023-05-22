@@ -7,7 +7,7 @@ import "./Home.css";
 function Home(){
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center"style={{ backgroundColor: "#3F51B5" }}>
+            <Grid container direction="row" justifyContent="center" alignItems="center"style={{ backgroundColor: "#FF4D6D" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
@@ -16,7 +16,7 @@ function Home(){
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
-                        <Button id="button-p" variant="outlined">Ver Postagens</Button>
+                        <Button className='botao-postagem' variant="outlined">Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
@@ -26,16 +26,16 @@ function Home(){
                 </Grid>
             </Grid>
 
-            <Grid container direction="row-reverse" justifyContent="center" alignItems="center"style={{ backgroundColor: "#fdc660" }}>
+            <Grid container direction="row-reverse" justifyContent="center" alignItems="center"style={{ backgroundColor: "#ffb3c6" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "black", fontWeight: "bold" }}>Ou...</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "black", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Ou...</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
-                        <Button id="button-p" variant="outlined">Ver Temas</Button>
+                        <Button className='botao-tema' variant="outlined">Ver Temas</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >

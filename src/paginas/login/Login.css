@@ -1,0 +1,17 @@
+.textos1{
+    color: #FF4D6D;
+    font-weight: bold !important;
+}
+
+
+.text-decorator-none{
+    text-decoration: none;
+    color: white;
+}
+
+.botao{
+    background-color: #FF4D6D !important;
+    color:#FFFFFF !important;
+    border-radius: 15px !important;
+ }
+ 

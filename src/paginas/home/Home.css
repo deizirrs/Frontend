@@ -1,5 +1,25 @@
-#button-p{
-    border-color: rgb(7, 6, 6);
-    background-color: #ffffff60;
-    color: "black"
+.botao-tema{
+    border-color: white !important;
+    background-color: #ff0054 !important;
+    box-shadow: 3px 3px 7px #590D22;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+
+.botao-postagem{
+    border-color: white !important;
+    background-color: #ffb3c6 !important;
+    box-shadow: 3px 3px 7px #590D22;
+    color: #ff0054!important;
+    font-weight: bold !important;
+}
+
+
+.botao-postagem:hover{
+    background-color:#fb6f92 !important;
+}
+
+.botao-tema:hover{
+    background-color:#fb6f92 !important;
 }

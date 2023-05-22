@@ -17,9 +17,9 @@ function Navbar() {
 
     return (
         <>
-            <AppBar position="static" style={{ backgroundColor: '#FF70CA' }}>
+            <AppBar position="static" style={{ backgroundColor: '#ffb3c6' }}>
                 <Toolbar variant="dense">
-                    <img src="src/assets/images/logo.png" alt="Logo ufa" width="100px" height="100px" />
+                    <img src="src/assets/images/logo_ufa_sem_fundo.png" alt="Logo ufa" width="100px" height="100px" />
                         <Box marginLeft="auto">
                             <IconButton
                                 edge="end"

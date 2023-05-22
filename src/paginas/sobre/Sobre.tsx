@@ -5,11 +5,11 @@ import { useState } from 'react';
 function Sobre(){
     return (    
         <>
-       <Grid container direction="row" style={{ backgroundColor: "#DDA0DD"}}>
+       <Grid container direction="row" style={{ backgroundColor: "#ffb3c6"}}>
             <Grid item xs={12}>
                 <Box paddingX={20}>
-                    <Typography variant="h3" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "white", fontWeight: "bold"}} >Sobre</Typography>
-                    <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "white"}}>
+                    <Typography variant="h3" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "#ff0054", fontWeight: "bold"}} >Sobre</Typography>
+                    <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "#ff0054"}}>
                         UFA (União Feminina Agora), uma poderosa rede social dedicada a unir mulheres e oferecer um apoio significativo em diversas áreas.
                         Nosso principal objetivo é promover a empregabilidade feminina, fornecendo um espaço para divulgação de cursos e habilidades profissionais,
                         além de oferecer uma plataforma para que as mulheres possam vender seus produtos e serviços.
@@ -21,7 +21,7 @@ function Sobre(){
                         Acreditamos na capacidade das mulheres de alcançar o sucesso em todas as esferas da vida e estamos comprometidos em fornecer um ambiente seguro,
                         empoderador e inspirador para que isso aconteça. Na UFA, você encontrará uma comunidade vibrante de mulheres prontas para apoiá-la em sua jornada.
                     </Typography>
-                    <Typography  variant="h6" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "white", fontWeight: "bold"}}>
+                    <Typography  variant="h6" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "#ff0054", fontWeight: "bold"}}>
                         Junte-se a nós na UFA e faça parte dessa incrível rede social criada especialmente para você, MULHER determinada a conquistar seus objetivos. Juntas, iremos mais longe!
                     </Typography>
                 </Box>
