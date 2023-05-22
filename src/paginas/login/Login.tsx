@@ -47,7 +47,7 @@ function Login(){
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
+                <Box paddingX={20} style={{backgroundColor:"white"}}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='textos1'>Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
@@ -59,8 +59,8 @@ function Login(){
                                 </Button>
                         </Box>
                     </form>
-                    <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
+                    <Box display='flex' justifyContent='center' marginTop={2} >
+                        <Box marginRight={1}  >
                             <Typography variant='subtitle1' gutterBottom align='center' style={{color: "#FF4D6D"}}>Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastrar'>

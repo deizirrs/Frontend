@@ -5,6 +5,7 @@ import Footer from './componentes/estaticos/footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './paginas/home/Home'
 import Sobre from './paginas/sobre/Sobre'
+import Login from './paginas/login/Login'
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/home" element={<Home />}/>
             <Route path="/sobre" element={<Sobre/>}/>
+            <Route path="/login" element={<Login/>}/>
+
           </Routes>
         <Footer />
       </BrowserRouter>
