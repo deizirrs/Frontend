@@ -17,15 +17,16 @@ function Navbar() {
 
     return (
         <>
-            <AppBar position="static" style={{ backgroundColor: '#ffb3c6' }}>
+            <AppBar position="static"  style={{ backgroundColor: '#ffb3c6' }}>
                 <Toolbar variant="dense">
                     <img src="src/assets/images/logo_ufa_sem_fundo.png" alt="Logo ufa" width="100px" height="100px" />
                         <Box marginLeft="auto">
                             <IconButton
                                 edge="end"
-                                color="inherit"
+                                style={{ color: '#ff0054' }}
                                 aria-label="menu"
                                 onClick={toggleDrawer(true)}
+                                
                             >
                                 <MenuIcon />
                             </IconButton>
@@ -34,32 +35,32 @@ function Navbar() {
                                 open={isDrawerOpen}
                                 onClose={toggleDrawer(false)}
                             >
-                                <List>
+                                <List style={{ backgroundColor: '#ffb3c6' }}>
                                     <Link to="/home" className="text-decorator-none">
-                                        <ListItem button>
-                                            <ListItemText primary="Home" />
+                                        <ListItem button >
+                                            <ListItemText primary="Home" style={{ color: '#ff0054' }}/>
                                         </ListItem>
                                     </Link>
                                     <ListItem button>
-                                        <ListItemText primary="Criar Postagem" />
+                                        <ListItemText primary="Criar Postagem" style={{ color: '#ff0054' }} />
                                     </ListItem>
                                     <Link to="/sobre" className="text-decorator-none">
                                         <ListItem button>
-                                            <ListItemText primary="Sobre" />
+                                            <ListItemText primary="Sobre" style={{ color: '#ff0054' }} />
                                         </ListItem>
                                     </Link>
                                     <ListItem button>
-                                        <ListItemText primary="Postagens" />
+                                        <ListItemText primary="Postagens" style={{ color: '#ff0054' }}/>
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="Temas" />
+                                        <ListItemText primary="Temas" style={{ color: '#ff0054' }} />
                                     </ListItem>
                                     <ListItem button>
-                                        <ListItemText primary="Cadastrar Temas" />
+                                        <ListItemText primary="Cadastrar Temas" style={{ color: '#ff0054' }} />
                                     </ListItem>
                                     <Link to="/login" className="text-decorator-none">
                                         <ListItem button>
-                                            <ListItemText primary="Logout" />
+                                            <ListItemText primary="Logout" style={{color: '#ff0054'}}/>
                                         </ListItem>
                                     </Link>
                                 </List>
