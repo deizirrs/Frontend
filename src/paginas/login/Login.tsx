@@ -15,7 +15,6 @@ function Login(){
             id: 0,
             usuario: '',
             senha: '',
-            tipo:'',
             token:'',
         }
         )
@@ -52,7 +51,6 @@ function Login(){
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='textos1'>Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <TextField value={userLogin.tipo} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='tipo' label='tipo' variant='outlined' name='tipo' margin='normal' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                                 <Button type='submit' variant='contained' className='botao'>
                                     Logar

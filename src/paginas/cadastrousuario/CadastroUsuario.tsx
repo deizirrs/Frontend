@@ -12,20 +12,20 @@ function CadastroUsuario() {
     const [user, setUser] = useState<User>(
         {
             id: 0,
-            nome: '',
+            nomeUsuario: '',
             usuario: '',
             senha: '',
-            tipo: '',
+            tipoUsuario: '',
             foto: ''
         })
 
     const [userResult, setUserResult] = useState<User>(
         {
             id: 0,
-            nome: '',
+            nomeUsuario: '',
             usuario: '',
             senha: '',
-            tipo: '',
+            tipoUsuario: '',
             foto: ''
         })
 
@@ -69,10 +69,10 @@ function CadastroUsuario() {
                 <Box padding={10}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' className="textoCadastro" gutterBottom color='textPrimary' component='h3' align='center'>Cadastre-se</Typography>
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant="outlined" name='nome' margin='normal' fullWidth />
+                        <TextField value={user.nomeUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nomeUsuario' label='nome' variant="outlined" name='nomeUsuario' margin='normal' fullWidth />
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario (e-mail)' variant="outlined" name='usuario' margin='normal' fullWidth />
                         <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='foto (link foto)' variant="outlined" name='foto' margin='normal' fullWidth />
-                        <TextField value={user.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='tipo' label='tipo de usuario (fisica/juridica)' variant="outlined" name='tipo' margin='normal' fullWidth />
+                        <TextField value={user.tipoUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='tipoUsuario' label='tipo de usuario (fisica/juridica)' variant="outlined" name='tipoUsuario' margin='normal' fullWidth />
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha (min: 8 caracteres)' variant="outlined" name='senha' margin='normal' type='password' fullWidth />
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='confirmarSenha' variant="outlined" name='confirmarSenha' margin='normal' type='password' fullWidth />
 

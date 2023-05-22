@@ -1,9 +1,9 @@
 interface User{
     id:number;
-    nome:string;
+    nomeUsuario:string;
     usuario:string;
     senha:string;
-    tipo: string;
+    tipoUsuario: string;
     foto:string;
 
 }
