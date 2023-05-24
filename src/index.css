@@ -12,4 +12,8 @@ body::-webkit-scrollbar {
     border: 1px solid rgba(255, 255, 255, 0);  /* creates padding around scroll thumb */
     
   }
+
+  * {
+    margin: 0
+  }
  
