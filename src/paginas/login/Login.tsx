@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../service/Service';
 import UserLogin from '../../models/userLogin'
-import { addToken } from '../../store/token/Action';
+import { addId, addToken } from '../../store/token/Action';
 import { useDispatch } from 'react-redux';
 
 function Login(){
@@ -21,21 +21,38 @@ function Login(){
             usuario: "",
             senha: "",
             token: ""
-        }
-    )
+        });
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        usuario: "",
+        senha: "",
+        token: "",
+      });
+
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
-            [e.target.name]: e.target.value
-        })
+            [e.target.name]: e.target.value,
+        });
     }
 
+    // useEffect(() => {
+    //     if (token !== '') {
+    //         dispatch(addToken(token))
+    //         navigate('/home')
+    //     }
+    // }, [token])
+
     useEffect(() => {
-        if (token !== '') {
-            dispatch(addToken(token))
-            navigate('/home')
+        if (respUserLogin.token !== '') {
+          console.log(respUserLogin.token)
+          console.log(respUserLogin.id)
+          dispatch(addToken(respUserLogin.token));
+          dispatch(addId(respUserLogin.id.toString()));
+          navigate("/home");
         }
-    }, [token])
+      }, [respUserLogin.token]);
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
