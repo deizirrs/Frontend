@@ -4,44 +4,53 @@ import { Box, Grid, Button, TextField, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../service/Service';
-import UserLogin from '../../models/UserLogin'
+import UserLogin from '../../models/userLogin'
+import { addToken } from '../../store/token/Action';
+import { useDispatch } from 'react-redux';
 
 function Login(){
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    
 
-    const[userLogin, setUserLogin] = useState<UserLogin>(
+    const dispatch = useDispatch();
+
+    const [token, setToken] =useState("");
+
+    const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            usuario: '',
-            senha: '',
-            token:'',
+            usuario: "",
+            senha: "",
+            token: ""
         }
-        )
+    )
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
 
-        function updateModel(e: ChangeEvent<HTMLInputElement>) {
+    useEffect(() => {
+        if (token !== '') {
+            dispatch(addToken(token))
+            navigate('/home')
+        }
+    }, [token])
 
-            setUserLogin({
-                ...userLogin,
-                [e.target.name]: e.target.value
-            })
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            await login(`/usuarios/login`, userLogin, setToken)
+
+            alert('Usuário logado com sucesso!')
+        } catch (error) {
+            alert('Dados do usuário inválido. Erro ao logar')
+
         }
 
-        useEffect(()=>{
-            if(token !==''){
-                navigate('/home')
-            }
-        },[token])
 
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
-            e.preventDefault();
-            try{
-                await login(`/usuarios/logar`, userLogin, setToken)
-                alert('Usuário Logado com sucesso!')
-            }catch(error){
-                alert('Dados do usuário inconsistentes. Erro ao logar!')
-            }
-        }
+    }
 
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -49,8 +58,8 @@ function Login(){
                 <Box paddingX={20} style={{backgroundColor:"white"}}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='textos1'>Entrar</Typography>
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=>updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                                 <Button type='submit' variant='contained' className='botao'>
                                     Logar
