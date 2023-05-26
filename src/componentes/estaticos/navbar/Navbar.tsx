@@ -50,9 +50,11 @@ function Navbar() {
                                             <ListItemText primary="Home" style={{ color: '#ff0054' }}/>
                                         </ListItem>
                                     </Link>
+                                    <Link to="/formularioPostagem" className="text-decorator-none">
                                     <ListItem button>
                                         <ListItemText primary="Criar Postagem" style={{ color: '#ff0054' }} />
                                     </ListItem>
+                                    </Link>
                                     <Link to="/sobre" className="text-decorator-none">
                                         <ListItem button>
                                             <ListItemText primary="Sobre" style={{ color: '#ff0054' }} />
@@ -63,12 +65,16 @@ function Navbar() {
                                         <ListItemText primary="Postagens" style={{ color: '#ff0054' }}/>
                                     </ListItem>
                                     </Link>
+                                    <Link to="/temas" className="text-decorator-none">
                                     <ListItem button>
-                                        <ListItemText primary="Temas" style={{ color: '#ff0054' }} />
+                                        <ListItemText primary="Temas" style={{ color: '#ff0054' }} />                                       
                                     </ListItem>
+                                    </Link>
+                                    <Link to="/formularioTema" className="text-decorator-none">
                                     <ListItem button>
                                         <ListItemText primary="Cadastrar Temas" style={{ color: '#ff0054' }} />
                                     </ListItem>
+                                    </Link>
                                     <Link to="/contatos" className="text-decorator-none">
                                         <ListItem button >
                                             <ListItemText primary="Contatos" style={{ color: '#ff0054' }}/>
