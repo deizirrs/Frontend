@@ -13,7 +13,7 @@ function Login(){
     
     const dispatch = useDispatch();
 
-    const [token, setToken] =useState("");
+    // const [token, setToken] =useState("");
 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
@@ -57,7 +57,7 @@ function Login(){
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/login`, userLogin, setToken)
+            await login(`/usuarios/login`, userLogin, setRespUserLogin)
 
             alert('Usuário logado com sucesso!')
         } catch (error) {
