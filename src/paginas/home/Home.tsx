@@ -24,10 +24,10 @@ function Home(){
                 </Grid>
             </Grid>
 
-            <Grid container direction="row-reverse" justifyContent="center" alignItems="center"style={{ backgroundColor: "#ffb3c6" }}>
+            <Grid container direction="row-reverse" justifyContent="center" alignItems="center"style={{ backgroundColor: "#faf0ca" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Ou...</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ backgroundColor: "#faf0ca", fontWeight: "bold" }}>Ou...</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
