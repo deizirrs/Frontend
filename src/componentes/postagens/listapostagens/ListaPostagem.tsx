@@ -9,6 +9,8 @@ import './ListaPostagem.css';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import { UserState } from '../../../store/token/Reducer';
+
 
 function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([])
@@ -32,15 +34,6 @@ function ListaPostagem() {
             progress: undefined,
           });
 
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-          theme: "colored",
-          progress: undefined,
-        });
         navigate("/login")
   
       }
