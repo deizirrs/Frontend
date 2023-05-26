@@ -3,10 +3,12 @@ import './Login.css';
 import { Box, Grid, Button, TextField, Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
+import 'react-toastify/dist/ReactToastify.css'
 import { login } from '../../service/Service';
 import UserLogin from '../../models/userLogin'
 import { addId, addToken } from '../../store/token/Action';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 function Login(){
     let navigate = useNavigate();
@@ -54,19 +56,36 @@ function Login(){
         }
       }, [respUserLogin.token]);
 
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+      async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/login`, userLogin, setRespUserLogin)
-
-            alert('Usuário logado com sucesso!')
+         
+            await login('/usuarios/logar', userLogin, setRespUserLogin)
+            toast.success('Login efetuado com sucesso!', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         } catch (error) {
-            alert('Dados do usuário inválido. Erro ao logar')
-
+   
+            toast.error('Erro ao efetuar login! Verifique os dados do Usuário!', {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
         }
-
-
     }
+
 
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center'>
