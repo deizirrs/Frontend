@@ -7,7 +7,6 @@ import {Box} from '@mui/material';
 import './ListaPostagem.css';
 // import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
-import { UserState } from '../../../store/token/Reducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
@@ -22,6 +21,7 @@ function ListaPostagem() {
     useEffect(() => {
       if (token == "") {
         toast.error("Você precisa estar logado!", {
+
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -31,6 +31,16 @@ function ListaPostagem() {
             theme: "colored",
             progress: undefined,
           });
+
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
         navigate("/login")
   
       }

@@ -1,12 +1,40 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
-import react from 'react'
+import react, { useEffect } from 'react'
 import "./Home.css";
+
 import { Link } from 'react-router-dom';
 
-function Home(){
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { UserState } from '../../store/token/Reducer';
+import { toast } from 'react-toastify';
+
+function Home() {
+    let navigate = useNavigate();
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    )
+
+    useEffect(() => {
+        if (token === "") {
+            toast.error('Você precisa estar logado!!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable:false,
+                theme:"colored",
+                progress: undefined,
+              });
+            navigate("/login")
+
+        }
+    }, [token])
+
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center"style={{ backgroundColor: "#FF4D6D" }}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#FF4D6D" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
@@ -27,7 +55,7 @@ function Home(){
                 </Grid>
             </Grid>
 
-            <Grid container direction="row-reverse" justifyContent="center" alignItems="center"style={{ backgroundColor: "#faf0ca" }}>
+            <Grid container direction="row-reverse" justifyContent="center" alignItems="center" style={{ backgroundColor: "#faf0ca" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ backgroundColor: "#faf0ca", fontWeight: "bold" }}>Ou...</Typography>
