@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css';
+import useLocalStorage from 'react-use-localstorage';
 
 function Navbar() {
+    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = (open: any) => (event: any) => {
@@ -14,6 +17,12 @@ function Navbar() {
 
         setIsDrawerOpen(open);
     };
+
+    function goLogout(){
+        setToken('')
+        alert("Usuário deslogado")
+        navigate('/login')
+    }    
 
     return (
         <>
@@ -49,9 +58,11 @@ function Navbar() {
                                             <ListItemText primary="Sobre" style={{ color: '#ff0054' }} />
                                         </ListItem>
                                     </Link>
+                                    <Link to="/postagens" className="text-decorator-none">
                                     <ListItem button>
                                         <ListItemText primary="Postagens" style={{ color: '#ff0054' }}/>
                                     </ListItem>
+                                    </Link>
                                     <ListItem button>
                                         <ListItemText primary="Temas" style={{ color: '#ff0054' }} />
                                     </ListItem>
@@ -63,11 +74,11 @@ function Navbar() {
                                             <ListItemText primary="Contatos" style={{ color: '#ff0054' }}/>
                                         </ListItem>
                                     </Link>
-                                    <Link to="/login" className="text-decorator-none">
-                                        <ListItem button>
+                                    {/* <Link to="/login" className="text-decorator-none"> */}
+                                        <ListItem button onClick={goLogout}>
                                             <ListItemText primary="Logout" style={{color: '#ff0054'}}/>
                                         </ListItem>
-                                    </Link>
+                                    {/* </Link> */}
                                 </List>
                             </Drawer>
                         </Box>

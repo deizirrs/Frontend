@@ -5,17 +5,32 @@ import { busca } from '../../../service/Service';
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
 import './ListaPostagem.css';
-import useLocalStorage from 'react-use-localstorage';
+// import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
+import { UserState } from '../../../store/token/Reducer';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 function ListaPostagem() {
     const [posts, setPosts] = useState<Postagem[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+      );
     let navigate = useNavigate();
   
     useEffect(() => {
       if (token == "") {
-        alert("Você precisa estar logado")
+        toast.error("Você precisa estar logado!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+          });
         navigate("/login")
   
       }
@@ -67,7 +82,7 @@ function ListaPostagem() {
                     </Link>
                     <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button variant="contained" size='small' color="secondary">
+                        <Button className="button-d" variant="contained" size='small' color="secondary">
                           deletar
                         </Button>
                       </Box>

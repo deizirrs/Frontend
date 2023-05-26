@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import react from 'react'
 import "./Home.css";
+import { Link } from 'react-router-dom';
 
 function Home(){
     return (
@@ -12,9 +13,11 @@ function Home(){
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Encontre oportunidades de crescimento!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
+                    <Link to={'/postagens'} className="textDecoration">  
                         <Box marginRight={1}>
                         </Box>
                         <Button className='botao-postagem' variant="outlined">Ver Postagens</Button>
+                    </Link>    
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
