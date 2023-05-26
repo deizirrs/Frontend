@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import useLocalStorage from "react-use-localstorage";
+
 import Tema from "../../../models/Tema";
 import { busca } from "../../../service/Service";
 import { useSelector } from "react-redux";
