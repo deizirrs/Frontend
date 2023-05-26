@@ -4,10 +4,22 @@ import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css';
 import useLocalStorage from 'react-use-localstorage';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { UserState } from '../../../store/token/Reducer';
+import { addToken } from '../../../store/token/Action';
 
 function Navbar() {
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
+
+    const dispatch = useDispatch();
+
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+      );
+
     let navigate = useNavigate();
+
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = (open: any) => (event: any) => {
@@ -19,9 +31,21 @@ function Navbar() {
     };
 
     function goLogout(){
-        setToken('')
-        alert("Usuário deslogado")
-        navigate('/login')
+        dispatch(addToken(""));
+            
+    toast.info('Usuário deslogado!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable:false,
+        theme:"colored",
+        progress: undefined,
+      });
+  
+      navigate("/login");
+    
     }    
 
     return (
