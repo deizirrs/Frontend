@@ -7,7 +7,7 @@ import { busca } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { UserState } from '../../../store/token/Reducer';
 
-function ListaTema() {
+function ListaTemas() {
     const [temas, setTemas] = useState<Tema[]>([])
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
@@ -100,4 +100,4 @@ function ListaTema() {
 
 
 }
-export default ListaTema;
+export default ListaTemas;
