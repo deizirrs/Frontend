@@ -3,7 +3,6 @@ import {Container, Typography, TextField, Button, Select, InputLabel, MenuItem, 
 import "./CadastroPostagem.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
-import useLocalStorage from "react-use-localstorage";
 import Postagem from "../../../models/Postagem";
 import { busca, buscaId, post, put } from "../../../service/Service";
 import { useSelector } from "react-redux";
@@ -161,7 +160,7 @@ function CadastroPostagem() {
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
-          style={{ color: "#C9184A" }}
+          style={{ color: "#ff0054" }}
           component="h1"
           align="center"
         >
@@ -204,7 +203,7 @@ function CadastroPostagem() {
               <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText style={{ color: "#C9184A" }}>
+          <FormHelperText style={{ color: "#ff0054" }}>
             Escolha um tema para a postagem
           </FormHelperText>
           <Button type="submit" variant="contained" className="btnFinalizar">
