@@ -1,103 +1,100 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import useLocalStorage from 'react-use-localstorage';
-import Tema from '../../../models/Tema'
-import { busca } from '../../../service/Service';
-import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/token/Reducer';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+    Box,
+    Card,
+    CardActions,
+    CardContent,
+    Button,
+    Typography,
+} from "@material-ui/core";
 
-function ListaTemas() {
+import Tema from "../../../models/Tema";
+import { busca } from "../../../service/Service";
+import { useSelector } from "react-redux";
+import { UserState } from "../../../store/token/Reducer";
+import { toast } from "react-toastify";
+
+function ListaTema() {
     const [temas, setTemas] = useState<Tema[]>([])
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     let history = useNavigate();
 
     useEffect(() => {
-        if (token === '') {
-            alert("Você precisa estar logado")
-            history("/login")
+        if (token === "") {
+            toast.error("Você precisa estar logado!", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            history("/login");
         }
-
-    }, [token])
-
+    }, [token]);
 
     async function getTema() {
         await busca("/temas", setTemas, {
             headers: {
+                Authorization: token,
+            },
+        });
+    }
 
-
-                'Authorization': token
-            }
-
-
-        })
-       
-
-
-
-    } 
-    
-    
-    useEffect(() => { getTema() }, [temas.length])
+    useEffect(() => {
+        getTema();
+    }, [temas?.length]);
     return (
-        <>{
-            temas.map(tema => (
+        <>
+            {temas?.map((tema) => (
                 <Box m={2}>
                     <Card variant="outlined">
                         <CardContent>
-
                             <Typography color="textSecondary" gutterBottom>
-
-                                tema
+                                Tema
                             </Typography>
-                            <Typography>
-                                {tema.descricao}
-                            </Typography>
+                            <Typography>{tema.nome}</Typography>
+                            <Typography>{tema.descricao}</Typography>
                         </CardContent>
+
                         <CardActions>
                             <Box display="flex" justifyContent="center" mb={1.5}>
-
-                                <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
+                                <Link
+                                    to={`/formularioTema/${tema.id}`}
+                                    className="text-decorator-none"
+                                >
                                     <Box mx={1}>
-                                        <Button variant="contained" className="marginLeft" size='small' color='primary'>
-                                            atualizar
+                                        <Button
+                                            variant="contained"
+                                            className="marginLeft"
+                                            size="small"
+                                            color="primary"
+                                        >
+                                            Atualizar
                                         </Button>
                                     </Box>
-
                                 </Link>
-                                <Link to={`/deletarTema/${tema.id}`} className="text-decorator-nome">
+                                <Link
+                                    to={`/deletarTema/${tema.id}`}
+                                    className="text-decorator-nome"
+                                >
                                     <Box mx={1}>
-                                        <Button variant='contained' size='small' color="secondary">
+                                        <Button variant="contained" size="small" color="secondary">
                                             deletar
                                         </Button>
                                     </Box>
-
                                 </Link>
-
                             </Box>
                         </CardActions>
-
                     </Card>
-                </Box>))
-
-        }
-
-
+                </Box>
+            ))}
         </>
-
-
-
-
-
-
-    )
-
-
-
-
-
-
+    );
 }
-export default ListaTemas;
+export default ListaTema;
