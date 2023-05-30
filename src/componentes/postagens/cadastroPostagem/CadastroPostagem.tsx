@@ -84,7 +84,7 @@ function CadastroPostagem() {
   async function getTemas() {
     await busca("/temas", setTemas, {
       headers: {
-        Authorization: token,
+        'Authorization': token,
       },
     });
   }
@@ -92,7 +92,7 @@ function CadastroPostagem() {
   async function findByIdPostagem(id: string) {
     await buscaId(`postagens/${id}`, setPostagem, {
       headers: {
-        Authorization: token,
+        'Authorization': token,
       },
     });
   }
@@ -110,7 +110,7 @@ function CadastroPostagem() {
 
     if (id !== undefined) {
       try {
-        await put(`/postagens/`, postagem, setPostagem, {
+        await put(`/postagens/${id}`, postagem, setPostagem, {
           headers: {
             'Authorization': token
           }
@@ -209,7 +209,7 @@ function CadastroPostagem() {
             onChange={(e) =>
               buscaId(`/temas/${e.target.value}`, setTema, {
                 headers: {
-                  Authorization: token,
+                  'Authorization': token,
                 },
               })
             }
