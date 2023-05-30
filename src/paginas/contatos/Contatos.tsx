@@ -12,6 +12,9 @@ import { useN01TextInfoContentStyles } from '@mui-treasury/styles/textInfoConten
 import TextInfoContent from '@mui-treasury/components/content/textInfo';
 import imagem from '../../assets/images/IMG-5810 (1).jpg'
 import logo from '../../assets/images/logo.png'
+import kat from '../../assets/images/kat.jpeg'
+import cau from '../../assets/images/cau.jpeg'
+import deizi from '../../assets/images/deizi.jpeg'
 import bianca from '../../assets/images/bianca.jpeg'
 import michelle from '../../assets/images/michelle.jpeg'
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -83,13 +86,44 @@ export const Contatos = React.memo(function PostCard() {
                         classes={mediaStyles}
                         image={logo}
                     />
-                    <Avatar className={cardStyles.avatar} src={imagem} />
+                    <Avatar className={cardStyles.avatar} src={cau} />
                     <CardContent className={cardStyles.content}>
                         <TextInfoContent
                             classes={textCardContentStyles}
-                            heading={'Olá, eu sou o Gabriel Lopes'}
+                            heading={'Olá meu nome é Carolina'}
                             body={
-                                'Tenho 26 anos, moro em São Paulo captal.Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado em Matemática na área de Otimização.'
+                                ' Mas pode me chamar de Cau. Tenho 31 anos, moro no centro de são paulo, já fui geografa , professora voluntária, garçonete, conferente e monitora, sou autodidata e dedicada. Sou fluente em espanhol e aprendiz de inglês.'
+                            }
+                        />
+                    </CardContent>
+                    <Box px={2} pb={2} mt={-1}>
+                        <Box display="flex" alignItems="center" justifyContent="center">
+                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                                <GitHubIcon className="redes" />
+                            </a>
+                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                                <InstagramIcon className="redes" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                                <LinkedInIcon className="redes" />
+                            </a>
+                        </Box>
+                    </Box>
+                </Card>
+            </Grid>
+            <Grid item >
+                <Card className={cx(cardStyles.root, shadowStyles.root)}>
+                    <CardMedia
+                        classes={mediaStyles}
+                        image={logo}
+                    />
+                    <Avatar className={cardStyles.avatar} src={deizi} />
+                    <CardContent className={cardStyles.content}>
+                        <TextInfoContent
+                            classes={textCardContentStyles}
+                            heading={'Olá, eu sou a Deiziane'}
+                            body={
+                                'Tenho  21 anos, sou Desenvolvedora Full Stack e moro em São Paulo. Estou cursando o 2º semestre de ADS. Sou proativa e possuo habilidades interpessoais, como resolução de conflitos e trabalho em equipe.'
                             }
                         />
                     </CardContent>
@@ -120,7 +154,7 @@ export const Contatos = React.memo(function PostCard() {
                             classes={textCardContentStyles}
                             heading={'Olá, eu sou o Gabriel Lopes'}
                             body={
-                                'Tenho 26 anos, moro em São Paulo captal.Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado em Matemática na área de Otimização.'
+                                'Tenho 26 anos, moro em São Paulo. Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado área de Otimização. Ja trabalhei como assitente administrativo e professor. Particularmente gosto de estudar e reolver problemas.'
                             }
                         />
                     </CardContent>
@@ -145,44 +179,13 @@ export const Contatos = React.memo(function PostCard() {
                         classes={mediaStyles}
                         image={logo}
                     />
-                    <Avatar className={cardStyles.avatar} src={imagem} />
+                    <Avatar className={cardStyles.avatar} src={kat} />
                     <CardContent className={cardStyles.content}>
                         <TextInfoContent
                             classes={textCardContentStyles}
-                            heading={'Olá, eu sou o Gabriel Lopes'}
+                            heading={'Olá, eu sou a Katarina'}
                             body={
-                                'Tenho 26 anos, moro em São Paulo captal.Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado em Matemática na área de Otimização.'
-                            }
-                        />
-                    </CardContent>
-                    <Box px={2} pb={2} mt={-1}>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
-                                <GitHubIcon className="redes" />
-                            </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
-                                <LinkedInIcon className="redes" />
-                            </a>
-                        </Box>
-                    </Box>
-                </Card>
-            </Grid>
-            <Grid item >
-                <Card className={cx(cardStyles.root, shadowStyles.root)}>
-                    <CardMedia
-                        classes={mediaStyles}
-                        image={logo}
-                    />
-                    <Avatar className={cardStyles.avatar} src={imagem} />
-                    <CardContent className={cardStyles.content}>
-                        <TextInfoContent
-                            classes={textCardContentStyles}
-                            heading={'Olá, eu sou o Gabriel Lopes'}
-                            body={
-                                'Tenho 26 anos, moro em São Paulo captal.Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado em Matemática na área de Otimização.'
+                                'Tenho 22 anos, moro em São Paulo. Sou Desenvolvedora FullStack, possuo experiência com  análise anti fraude e em gestão de pessoas. Sou formada em RH , pretendo ingressar na faculdade tech. Atualmente estudando inglês. Amo crescer e me desenvolver'
                             }
                         />
                     </CardContent>
@@ -211,9 +214,9 @@ export const Contatos = React.memo(function PostCard() {
                     <CardContent className={cardStyles.content}>
                         <TextInfoContent
                             classes={textCardContentStyles}
-                            heading={'Olá, eu sou o Gabriel Lopes'}
+                            heading={'Olá, eu sou o Michelle'}
                             body={
-                                'Tenho 26 anos, moro em São Paulo captal.Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado em Matemática na área de Otimização.'
+                                'Tenho 30 anos, moro em São Paulo. Sou desenvolvedora Fullstack e estou cursando engenharia de software. Tenho  experiência em atendimento ao público, como comunicação eficaz, resolução de conflitos e trabalho em equipe.'
                             }
                         />
                     </CardContent>
