@@ -15,6 +15,7 @@ import ListaPostagem from "./componentes/postagens/listapostagens/ListaPostagem"
 import { Provider } from "react-redux";
 import store from "./store/Store";
 import { ToastContainer } from "react-toastify";
+import Perfil from "./componentes/perfil/Perfil";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/formularioPostagem" element={<CadastroPostagem />} />
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/postagens" element={<ListaPostagem />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
           <Footer />
         </BrowserRouter>
