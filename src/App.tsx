@@ -43,7 +43,6 @@ function App() {
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/postagens" element={<ListaPostagem />} />
             <Route path="/perfil" element={<Perfil />} />
-            
           </Routes>
           <Footer />
         </BrowserRouter>

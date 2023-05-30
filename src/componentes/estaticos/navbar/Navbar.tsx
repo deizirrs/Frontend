@@ -48,8 +48,11 @@ function Navbar() {
     navigate("/login");
   }
 
-  return (
-    <>
+  var navbarComponent;
+
+  if (token !== ""){
+navbarComponent = (
+ 
       <AppBar position="static" style={{ backgroundColor: "#ffb3c6" }}>
         <Toolbar variant="dense">
           <Link to="/home" className="text-decorator-none">
@@ -146,8 +149,9 @@ function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </>
-  );
+);
+}
+return <>{navbarComponent}</>;
 }
 
 export default Navbar;

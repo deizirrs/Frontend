@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { UserState } from "../../store/token/Reducer";
 import { toast } from "react-toastify";
+import Navbar from "../../componentes/estaticos/navbar/Navbar";
+import Footer from "../../componentes/estaticos/footer/Footer";
 
 function Home() {
   let navigate = useNavigate();
