@@ -41,7 +41,7 @@ function App() {
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/postagens" element={<ListaPostagem />} />
             <Route path="/perfil" element={<Perfil />} />
-            <Route path="/DeletaTemas/:id" element={<DeletaTemas />} />
+            <Route path="/deletaTemas/:id" element={<DeletaTemas />} />
           </Routes>
           <Footer />
         </BrowserRouter>
