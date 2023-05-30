@@ -5,6 +5,7 @@ interface Postagem{
     id:number;
     titulo:string;
     texto:string;
+    data: string;
     link:string;
     tema?:Tema| null
     usuario?: User| null

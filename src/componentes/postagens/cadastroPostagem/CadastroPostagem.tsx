@@ -5,17 +5,18 @@ import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
 import Postagem from "../../../models/Postagem";
 import { busca, buscaId, post, put } from "../../../service/Service";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { UserState } from "../../../store/token/Reducer";
 import { toast } from "react-toastify";
 import User from "../../../models/User";
+import { addToken } from "../../../store/token/Action";
 
 function CadastroPostagem() {
   let navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const [temas, setTemas] = useState<Tema[]>([]);
 
-
+  const dispatch = useDispatch()
   const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
@@ -43,12 +44,14 @@ function CadastroPostagem() {
   const [tema, setTema] = useState<Tema>({
     id: 0,
     descricao: "",
+    nome: ""
   });
 
   const [postagem, setPostagem] = useState<Postagem>({
     id: 0,
     titulo: "",
     texto: "",
+    data: '',
     link:'',
     tema: null,
     usuario: null
@@ -81,7 +84,7 @@ function CadastroPostagem() {
   async function getTemas() {
     await busca("/temas", setTemas, {
       headers: {
-        Authorization: token,
+        'Authorization': token,
       },
     });
   }
@@ -89,7 +92,7 @@ function CadastroPostagem() {
   async function findByIdPostagem(id: string) {
     await buscaId(`postagens/${id}`, setPostagem, {
       headers: {
-        Authorization: token,
+        'Authorization': token,
       },
     });
   }
@@ -103,15 +106,15 @@ function CadastroPostagem() {
   }
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault();
+    e.preventDefault()
 
     if (id !== undefined) {
       try {
-        await put(`/postagens`, postagem, setPostagem, {
+        await put(`/postagens/${id}`, postagem, setPostagem, {
           headers: {
-            Authorization: token,
-          },
-        });
+            'Authorization': token
+          }
+        })
         toast.success('Postagem atualizada com sucesso!', {
           position: "top-right",
           autoClose: 2000,
@@ -122,10 +125,22 @@ function CadastroPostagem() {
           theme:"colored",
           progress: undefined,
         });
-      } catch (error) {
-        console.log(`Erro: ${error}`);
-        alert("Ops...Algo deu errado! Tente novamente!");
+      } catch (error: any) {
+        if (error.response?.status ===403){
+          dispatch(addToken(''))
+        } else{
+        toast.error("Ops... Algo deu errado!", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
       }
+    }
     } else {
       try {
         await post(`/postagens`, postagem, setPostagem, {
@@ -194,7 +209,7 @@ function CadastroPostagem() {
             onChange={(e) =>
               buscaId(`/temas/${e.target.value}`, setTema, {
                 headers: {
-                  Authorization: token,
+                  'Authorization': token,
                 },
               })
             }
