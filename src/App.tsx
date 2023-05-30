@@ -17,6 +17,7 @@ import store from "./store/Store";
 import { ToastContainer } from "react-toastify";
 import Perfil from "./componentes/perfil/Perfil";
 import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
+import DeletaTemas from "./componentes/temas/deletatemas/DeletaTemas";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/postagens" element={<ListaPostagem />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/DeletaTemas/:id" element={<DeletaTemas />} />
           </Routes>
           <Footer />
         </BrowserRouter>
