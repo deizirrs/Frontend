@@ -104,6 +104,11 @@ function Navbar() {
                                             <ListItemText primary="Contatos" style={{ color: '#ff0054' }}/>
                                         </ListItem>
                                     </Link>
+                                    <Link to="/perfil" className="text-decorator-none">
+                                        <ListItem button >
+                                            <ListItemText primary="Perfil" style={{ color: '#ff0054' }}/>
+                                        </ListItem>
+                                    </Link>
                                     {/* <Link to="/login" className="text-decorator-none"> */}
                                         <ListItem button onClick={goLogout}>
                                             <ListItemText primary="Logout" style={{color: '#ff0054'}}/>
