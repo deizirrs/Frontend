@@ -67,13 +67,10 @@ export const Contatos = React.memo(function PostCard() {
                     </CardContent>
                     <Box px={2} pb={2} mt={-1}>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                            <a href="https://github.com/r4inha" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                            <a href="https://www.linkedin.com/in/bianca-luna-88aaa7116/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
                         </Box>
@@ -98,13 +95,10 @@ export const Contatos = React.memo(function PostCard() {
                     </CardContent>
                     <Box px={2} pb={2} mt={-1}>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                            <a href="https://github.com/krolcorrea" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                            <a href="https://www.linkedin.com/in/caucorreasilva/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
                         </Box>
@@ -129,13 +123,10 @@ export const Contatos = React.memo(function PostCard() {
                     </CardContent>
                     <Box px={2} pb={2} mt={-1}>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                            <a href="https://github.com/deizirrs" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                            <a href="https://www.linkedin.com/in/deizianer/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
                         </Box>
@@ -163,9 +154,6 @@ export const Contatos = React.memo(function PostCard() {
                             <a href="https://github.com/Gabriellopesg9" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
                             <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
@@ -191,13 +179,10 @@ export const Contatos = React.memo(function PostCard() {
                     </CardContent>
                     <Box px={2} pb={2} mt={-1}>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                            <a href="https://github.com/302kt" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                            <a href="https://www.linkedin.com/in/katarina-pereira-freire-30080b181/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
                         </Box>
@@ -222,13 +207,10 @@ export const Contatos = React.memo(function PostCard() {
                     </CardContent>
                     <Box px={2} pb={2} mt={-1}>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/Gabriellopesg9" target="_blank">
+                            <a href="https://github.com/MichelleGreghi" target="_blank">
                                 <GitHubIcon className="redes" />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className="redes" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/gabriel-lopes-98591924b/" target="_blank">
+                            <a href="https://www.linkedin.com/in/michellegreghi/" target="_blank">
                                 <LinkedInIcon className="redes" />
                             </a>
                         </Box>
