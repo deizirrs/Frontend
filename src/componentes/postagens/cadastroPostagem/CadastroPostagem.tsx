@@ -175,7 +175,7 @@ function CadastroPostagem() {
       <form onSubmit={onSubmit}>
         <Typography
           variant="h3"
-          style={{ color: "#ff0054" }}
+          style={{ color: "#532b88" }}
           component="h1"
           align="center"
         >
@@ -218,7 +218,7 @@ function CadastroPostagem() {
               <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText style={{ color: "#ff0054" }}>
+          <FormHelperText style={{ color: "#34185c" }}>
             Escolha um tema para a postagem
           </FormHelperText>
           <Button type="submit" variant="contained" className="btnFinalizar">
