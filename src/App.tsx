@@ -15,7 +15,7 @@ import ListaPostagem from "./componentes/postagens/listapostagens/ListaPostagem"
 import { Provider } from "react-redux";
 import store from "./store/Store";
 import { ToastContainer } from "react-toastify";
-import Perfil from "./componentes/perfil/Perfil";
+import Perfil from "./componentes/perfil/verPerfil/Perfil";
 import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
 
 function App() {
