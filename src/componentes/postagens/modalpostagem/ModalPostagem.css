@@ -4,12 +4,13 @@
 }
 
 .btnModal{
-    border-color: white !important;
-    background-color: #573737 !important;
-    box-shadow: 3px 3px 7px #bb637c;
+    border-color: #885cc2 !important;
+    background-color: hwb(266 26% 39%) !important;
+    box-shadow: 3px 3px 7px #2b203a;
     color: white !important;
 }
 
 .btnModal:hover{
-    background-color: #bb637c !important;
+    background-color: hwb(267 18% 67%) !important;
+    border-color: hwb(267 18% 67%) !important;
 }
