@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import User from '../../../models/User';
 import { buscaId } from '../../../service/Service';
 import './Perfil.css'
 import { UserState } from '../../../store/token/Reducer';
+import { Link } from 'react-router-dom';
 
 function Perfil() {
 
@@ -59,6 +60,11 @@ function Perfil() {
                     src={ user.foto }
                     alt={ user.nomeUsuario } />
             </Box>
+            <Link to="/atualizar-perfil">
+            <Button>
+                Atualizar Perfil
+            </Button>
+            </Link>
 
             <Box className='card-container-info'>
                 <Box>

@@ -17,6 +17,7 @@ import store from "./store/Store";
 import { ToastContainer } from "react-toastify";
 import Perfil from "./componentes/perfil/verPerfil/Perfil";
 import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
+import AtualizarPerfil from "./componentes/perfil/atualizarPerfil/AtualizarPerfil";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/temas" element={<ListaTemas />} />
             <Route path="/postagens" element={<ListaPostagem />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/atualizar-perfil" element={<AtualizarPerfil />} />
           </Routes>
           <Footer />
         </BrowserRouter>
