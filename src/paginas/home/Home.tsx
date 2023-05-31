@@ -34,11 +34,11 @@ function Home() {
 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#FF4D6D" }}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "white" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Encontre oportunidades de crescimento!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>UFA!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Encontre aqui oportunidades de crescimento!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                     <Link to={'/postagens'} className="textDecoration">  
@@ -55,11 +55,11 @@ function Home() {
                 </Grid>
             </Grid>
 
-            <Grid container direction="row-reverse" justifyContent="center" alignItems="center" style={{ backgroundColor: "#faf0ca" }}>
+            <Grid container direction="row-reverse" justifyContent="center" alignItems="center" style={{ backgroundColor: "#e1d3f5" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ backgroundColor: "#faf0ca", fontWeight: "bold" }}>Ou...</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Ou...</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
