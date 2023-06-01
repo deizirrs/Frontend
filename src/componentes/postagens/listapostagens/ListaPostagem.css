@@ -34,5 +34,15 @@
 
 .texto-tema{
     color: #330e63;
-    font-weight: bold
+    font-weight: bold;
+}
+
+.texto-tema:hover{
+    color: #330e63;
+    font-weight: bold !important;
+}
+
+.box{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);  
+    border-radius: 12px; 
 }
