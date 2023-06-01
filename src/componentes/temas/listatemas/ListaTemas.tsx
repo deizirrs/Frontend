@@ -52,17 +52,17 @@ function ListaTema() {
     return (
         <>
             {temas?.map((tema) => (
-                <Box m={2}>
+                <Box m={2} className='box'>
                     <Card variant="outlined">
-                        <CardContent>
+                        <CardContent className='box-postagem'>
                             <Typography color="textSecondary" gutterBottom>
                                 Tema
                             </Typography>
-                            <Typography>{tema.nome}</Typography>
+                            <Typography className='texto-tema' variant="h5">{tema.nome}</Typography>
                             <Typography>{tema.descricao}</Typography>
                         </CardContent>
 
-                        <CardActions>
+                        <CardActions className='box-postagem'>
                             <Box display="flex" justifyContent="center" mb={1.5}>
                                 <Link
                                     to={`/formularioTema/${tema.id}`}
@@ -71,7 +71,7 @@ function ListaTema() {
                                     <Box mx={1}>
                                         <Button
                                             variant="contained"
-                                            className="marginLeft"
+                                            className="marginLeft button-atualizar"
                                             size="small"
                                             color="primary"
                                         >
@@ -84,7 +84,7 @@ function ListaTema() {
                                     className="text-decorator-nome"
                                 >
                                     <Box mx={1}>
-                                        <Button variant="contained" size="small" color="secondary">
+                                        <Button className="button-d" variant="contained" size="small" color="secondary">
                                             deletar
                                         </Button>
                                     </Box>

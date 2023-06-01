@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import {Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText} from "@material-ui/core";
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core";
 import "./CadastroPostagem.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
@@ -32,8 +32,8 @@ function CadastroPostagem() {
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
-        draggable:false,
-        theme:"colored",
+        draggable: false,
+        theme: "colored",
         progress: undefined,
       });
       navigate("/login");
@@ -50,18 +50,18 @@ function CadastroPostagem() {
     id: 0,
     titulo: "",
     texto: "",
-    link:'',
+    link: '',
     tema: null,
     usuario: null
   });
 
-  const[user, setUser] = useState<User>({
+  const [user, setUser] = useState<User>({
     id: +userId,
-    nomeUsuario:'',
-    usuario:'',
-    senha:'',
-    tipoUsuario:'',
-    foto:'',
+    nomeUsuario: '',
+    usuario: '',
+    senha: '',
+    tipoUsuario: '',
+    foto: '',
   })
 
   useEffect(() => {
@@ -119,8 +119,8 @@ function CadastroPostagem() {
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
-          draggable:false,
-          theme:"colored",
+          draggable: false,
+          theme: "colored",
           progress: undefined,
         });
       } catch (error) {
@@ -140,8 +140,8 @@ function CadastroPostagem() {
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
-          draggable:false,
-          theme:"colored",
+          draggable: false,
+          theme: "colored",
           progress: undefined,
         });
       } catch (error) {
@@ -157,61 +157,83 @@ function CadastroPostagem() {
   }
 
   return (
-    <Container maxWidth="sm" className="topo">
-      <form onSubmit={onSubmit}>
-        <Typography
-          variant="h3"
-          style={{ color: "#532b88" }}
-          component="h1"
-          align="center"
-        >
-          Formulário de cadastro postagem
-        </Typography>
-        <TextField
-          value={postagem.titulo}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-          id="titulo"
-          label="Título da Postagem"
-          variant="outlined"
-          name="titulo"
-          margin="normal"
-          fullWidth
-        />
-        <TextField
-          value={postagem.texto}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
-          id="texto"
-          label="Digite o Texto"
-          name="texto"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-        />
-        <FormControl>
-          <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
-          <Select
-            labelId="demo-simple-select-helper-label"
-            id="demo-simple-select-helper"
-            onChange={(e) =>
-              buscaId(`/temas/${e.target.value}`, setTema, {
-                headers: {
-                  Authorization: token,
-                },
-              })
-            }
-          >
-            {temas.map((tema) => (
-              <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
-            ))}
-          </Select>
-          <FormHelperText style={{ color: "#34185c" }}>
-            Escolha um tema para a postagem
-          </FormHelperText>
-          <Button type="submit" variant="contained" className="btnFinalizar">
-            Finalizar
-          </Button>
-        </FormControl>
-      </form>
+    <Container maxWidth="sm" className="topo cor-fundo box-post-cadastro" >
+      <div className="form-wrapper">
+        <div className="form-content">
+          <form onSubmit={onSubmit}>
+            <Typography
+              variant="h3"
+              style={{ color: "white" }}
+              component="h1"
+              align="center"
+              className="texto-form-post"
+            >
+              Formulário de cadastro postagem
+            </Typography>
+            <TextField
+              value={postagem.titulo}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+              id="titulo"
+              label="Título da Postagem"
+              variant="outlined"
+              name="titulo"
+              margin="normal"
+              fullWidth
+              InputProps={{
+                className: 'white-text',
+                style: { color: '#ffffff' }
+              }}
+              InputLabelProps={{
+                style: { color: '#ffffff' },
+              }}
+            />
+            <TextField
+              value={postagem.texto}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)}
+              id="texto"
+              label="Digite o Texto"
+              name="texto"
+              className="formControl"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              InputProps={{
+                className: 'white-text',
+                style: { color: '#ffffff' }
+              }}
+              InputLabelProps={{
+                style: { color: '#ffffff' },
+              }}
+            />
+            <FormControl>
+              <InputLabel id="demo-simple-select-helper-label" style={{ color: '#ffffff' }}>Tema </InputLabel>
+              <Select
+                labelId="demo-simple-select-helper-label"
+                id="demo-simple-select-helper"
+                onChange={(e) =>
+                  buscaId(`/temas/${e.target.value}`, setTema, {
+                    headers: {
+                      Authorization: token,
+                    },
+                  })
+                }
+              >
+                {temas.map((tema) => (
+                  <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
+                ))}
+              </Select>
+              <FormHelperText style={{ color: "white" }}>
+                Escolha um tema para a postagem
+              </FormHelperText>
+              <Button type="submit" variant="contained" className="finalizar-post">
+                Finalizar
+              </Button>
+            </FormControl>
+          </form>
+        </div>
+        <div className="image-wrapper">
+        </div>
+      </div>
     </Container>
   );
 }
