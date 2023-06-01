@@ -1,43 +1,17 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import react, { useEffect } from 'react'
 import "./Home.css";
-
 import { Link } from 'react-router-dom';
 
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { UserState } from '../../store/token/Reducer';
-import { toast } from 'react-toastify';
-
 function Home() {
-    let navigate = useNavigate();
-    const token = useSelector<UserState, UserState["tokens"]>(
-        (state) => state.tokens
-    )
-
-    useEffect(() => {
-        if (token === "") {
-            toast.error('Você precisa estar logado!!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable:false,
-                theme:"colored",
-                progress: undefined,
-              });
-            navigate("/login")
-
-        }
-    }, [token])
 
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#f1f0f2" }}>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>UFA!</Typography>
+                <Grid alignItems="center" item xs={6}>                   
+                   
+                    // <Box paddingX={5} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Bem vindo a nossa comunidade!!</Typography> 
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Encontre aqui oportunidades de crescimento!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
