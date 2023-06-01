@@ -21,12 +21,14 @@
 .text-decorator-none{
     text-decoration: none;
     color: white;
+    font-weight: bold !important;
 }
 
 .botao{
     background-color: #2f184b !important;
     color:#FFFFFF !important;
     border-radius: 15px !important;
+    font-weight: bold !important;
  }
 
  .botao:hover{

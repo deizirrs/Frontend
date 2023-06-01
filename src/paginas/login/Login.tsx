@@ -93,7 +93,7 @@ function Login(){
                 <Box paddingX={20} className='box-login' justifyContent='center'>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='entrar'>Entrar</Typography>
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=>updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField className='campos-logar' value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>)=>updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>)=> updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center' justifyContent='center'>
                                 <Button type='submit' variant='contained' className='botao' >
