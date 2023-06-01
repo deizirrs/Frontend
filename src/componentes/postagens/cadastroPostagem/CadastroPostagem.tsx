@@ -43,6 +43,7 @@ function CadastroPostagem() {
   const [tema, setTema] = useState<Tema>({
     id: 0,
     descricao: "",
+    nome: ""
   });
 
   const [postagem, setPostagem] = useState<Postagem>({
