@@ -80,7 +80,7 @@ function ListaTema() {
                                     </Box>
                                 </Link>
                                 <Link
-                                    to={`/deletarTema/${tema.id}`}
+                                    to={`/deletaTemas/${tema.id}`}
                                     className="text-decorator-nome"
                                 >
                                     <Box mx={1}>

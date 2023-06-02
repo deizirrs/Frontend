@@ -1,44 +1,43 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
-import react, { useEffect } from 'react'
+import { Box, Button, Grid, Typography } from "@mui/material";
+import react, { useEffect } from "react";
 import "./Home.css";
-
-import { Link } from 'react-router-dom';
-
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { UserState } from '../../store/token/Reducer';
-import { toast } from 'react-toastify';
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { UserState } from "../../store/token/Reducer";
+import { toast } from "react-toastify";
+import Navbar from "../../componentes/estaticos/navbar/Navbar";
+import Footer from "../../componentes/estaticos/footer/Footer";
 
 function Home() {
-    let navigate = useNavigate();
-    const token = useSelector<UserState, UserState["tokens"]>(
-        (state) => state.tokens
-    )
+  let navigate = useNavigate();
+  const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  );
 
-    useEffect(() => {
-        if (token === "") {
-            toast.error('Você precisa estar logado!!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable:false,
-                theme:"colored",
-                progress: undefined,
-              });
-            navigate("/login")
-
-        }
-    }, [token])
+  useEffect(() => {
+    if (token === "") {
+      toast.error("Você precisa estar logado!!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      navigate("/login");
+    }
+  }, [token]);
 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#FF4D6D" }}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "white" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Encontre oportunidades de crescimento!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>UFA!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Encontre aqui oportunidades de crescimento!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                     <Link to={'/postagens'} className="textDecoration">  
@@ -55,11 +54,11 @@ function Home() {
                 </Grid>
             </Grid>
 
-            <Grid container direction="row-reverse" justifyContent="center" alignItems="center" style={{ backgroundColor: "#faf0ca" }}>
+            <Grid container direction="row-reverse" justifyContent="center" alignItems="center" style={{ backgroundColor: "#e1d3f5" }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ backgroundColor: "#faf0ca", fontWeight: "bold" }}>Ou...</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#ff0054", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Ou...</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Veja os nossos temas!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>

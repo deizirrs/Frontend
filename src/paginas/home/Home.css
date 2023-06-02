@@ -1,25 +1,27 @@
 .botao-tema{
-    border-color: white !important;
-    background-color: #ff0054 !important;
-    box-shadow: 3px 3px 7px #590D22;
+    border-color: #885cc2  !important;
+    background-color: hwb(266 26% 39%) !important;
+    box-shadow: 3px 3px 7px #2b203a;
     color: white !important;
     font-weight: bold !important;
 }
 
 
 .botao-postagem{
-    border-color: white !important;
-    background-color: #ffb3c6 !important;
-    box-shadow: 3px 3px 7px #590D22;
-    color: #ff0054!important;
+    border-color: #885cc2  !important;
+    background-color: hwb(266 26% 39%) !important;
+    box-shadow: 3px 3px 7px #2b203a;
+    color: white !important;
     font-weight: bold !important;
 }
 
 
 .botao-postagem:hover{
-    background-color:#fb6f92 !important;
+    background-color: hwb(267 18% 67%) !important;
+    border-color: hwb(267 18% 67%) !important;
 }
 
 .botao-tema:hover{
-    background-color:#fb6f92 !important;
+    background-color: hwb(267 18% 67%) !important;
+    border-color: hwb(267 18% 67%) !important;
 }

@@ -103,7 +103,7 @@ function Login(){
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2} >
                         <Box marginRight={1}  >
-                            <Typography variant='subtitle1' gutterBottom align='center' style={{color: "#FF4D6D"}}>Não tem uma conta?</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center' style={{color: "#532b88"}}>Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastrar'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>

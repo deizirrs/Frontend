@@ -3,11 +3,14 @@
 }
 
 .btnFinalizar{
-    background-color: #FF4D6D !important;
+    border-color: #885cc2  !important;
+    background-color: hwb(266 26% 39%) !important;
     color:#FFFFFF !important;
     border-radius: 15px !important;
+    padding: 8px 
 }
 
 .btnFinalizar:hover{
-    background-color: #590D22 !important;
+    background-color: hwb(267 18% 67%) !important;
+    border-color: hwb(267 18% 67%) !important;
 }
