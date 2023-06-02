@@ -55,6 +55,7 @@ navbarComponent = (
  
       <AppBar position="static" style={{ backgroundColor: "#996fcf" }}>
         <Toolbar variant="dense">
+          
           <Link to="/home" className="text-decorator-none">
             <img
               src="src/assets/images/logo_ufa_sem_fundo.png"
