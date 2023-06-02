@@ -17,7 +17,6 @@ import cau from '../../assets/images/cau.jpeg'
 import deizi from '../../assets/images/deizi.jpeg'
 import bianca from '../../assets/images/bianca.jpeg'
 import michelle from '../../assets/images/michelle.jpeg'
-import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import './Contatos.css'
