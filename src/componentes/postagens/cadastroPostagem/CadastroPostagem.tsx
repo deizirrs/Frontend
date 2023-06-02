@@ -51,6 +51,7 @@ function CadastroPostagem() {
     id: 0,
     titulo: "",
     texto: "",
+    data: "",
     link:'',
     tema: null,
     usuario: null
