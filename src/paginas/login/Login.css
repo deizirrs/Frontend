@@ -47,17 +47,19 @@
 }
 
 .cor-fundo{
-   background-color: #7552a05b;
+   background-color: #a995c2;
+   height: auto;
+   
 }
 
 .box-login{
-    background-color: #401c6b3d;
+    background-color: #401c6b31;
     border-radius: 30px;
-    width:60vh;
-    min-height: 80vh;
+    width:40vh;
+    height:70vh;
     padding-top: 20px;
     padding-left:20px;
-    margin-bottom: 10px;
+    margin-bottom: 10vh;
     margin-left: 20px;
     margin-top: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.466), -2px -2px 4px rgba(255, 255, 255, 0.219);
@@ -72,3 +74,4 @@
     color: #33125e;
     font-weight: bold !important
 }
+
