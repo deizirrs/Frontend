@@ -1,5 +1,5 @@
 .swiper {
-    width: 700px;
+    width: auto;
     height: 400px;
   }
   
@@ -12,7 +12,8 @@
   }
   
   .swiper {
-    margin-left: 350px;
-    margin-right: 300px;
+    margin-left: auto;
+    margin-right:auto;
+    ;
 
   }
