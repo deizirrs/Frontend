@@ -1,6 +1,6 @@
 .imgCadastro {
 
-    background-image: url(../../assets/images/logo.png) ;
+    background-image: url(../../assets/images/cadastrotela.svg) ;
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh ;
@@ -11,9 +11,19 @@
 
 
 
-.textoCadastro {
+.textoCadastro:hover {
+        font-weight: bolder!important;
+        color: #3a0a79f3 !important;
+        font-size: 53px !important;
+        padding-top: 9vh;
+        
+}
+
+.textoCadastro{
         font-weight: bold !important;
-        color: #FF4D6D !important
+        color: #170430f3 !important;
+        font-size: 53px !important;
+        padding-top: 9vh;
 }
 
 .btnCadastrar{
@@ -39,4 +49,74 @@
 
 .btnCadastrar:hover{
     background-color:#fb6f92 !important;
+}
+
+.box-cadastrar{
+    background-color: #401c6b3d;
+    border-radius: 10%;
+    /* width:50vh;
+    height: 92vh;
+    padding-top: 30px;
+    padding-left:60px;
+    padding-right: 60px;
+    padding: 10px 20px 15px 5px; */
+
+    /* width: 50%; */
+  height: 93.5vh;
+  padding-right: 14vh;
+  padding-left: 14vh;
+  margin-top: 4vh;
+  margin-bottom: 2.5vh;
+  margin-right: 15vh;
+  margin-left: 8vh;
+  /* padding-bottom: 136%;
+  padding-left: 17vh;
+  padding-right: 17vh;
+  padding-top: 7vh;
+  
+  margin-top: 10vh;
+  margin-bottom: 10vh; */
+
+    
+    /* margin-top: 16px; */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466), -2.3px -2.3px 4.3px rgba(255, 255, 255, 0.219);
+    
+}
+
+
+.custom-textfield {
+    height: 7.4vh;
+
+  }
+
+
+
+.cancelar{
+    border-color: #4b4750  !important;
+    background-color: hwb(270 11% 88% / 0.849) !important;
+    box-shadow: 3px 3px 7px #201e24;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 15px !important;
+}
+
+.cancelar:hover{
+    background-color: hwb(0 2% 46% / 0.925) !important;
+    border-color: hwb(0 8% 0% / 0.596) !important;
+    color:#fdfdfdb0 !important;
+}
+
+
+.cadastrar{
+
+    background-color: #3b0780f3 !important;
+    color:#FFFFFF !important;
+    border-radius: 15px !important;
+    font-weight: bold !important;
+}
+
+.cadastrar:hover{
+    background-color: #1f073ff3 !important;
+    color:#fdfdfdb0 !important;
+    font-weight: bold !important;
 }
