@@ -18,6 +18,7 @@ import { ToastContainer } from "react-toastify";
 import Perfil from "./componentes/perfil/verPerfil/Perfil";
 import DeletarPostagem from "./componentes/postagens/deletarPostagem/DeletarPostagem";
 import AtualizarPerfil from "./componentes/perfil/atualizarPerfil/AtualizarPerfil";
+import DeletaTemas from "./componentes/temas/deletatemas/DeletaTemas";
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
             <Route path="/cadastrar" element={<Cadastrar />} />
             <Route path="/contatos" element={<Contatos />} />
             <Route path="/formularioTema" element={<CadastroTemas />} />
+            <Route path="/formularioTema/:id" element={<CadastroTemas />} />
+            <Route path="/deletaTemas/:id" element={<DeletaTemas />} />
             <Route path="/temas/:id" element={<CadastroTemas />} />
             <Route path="/formularioPostagem/:id" element={<CadastroPostagem />}/>
             <Route path="/formularioPostagem" element={<CadastroPostagem />} />

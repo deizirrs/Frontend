@@ -3,10 +3,19 @@ import { Typography, Box, Grid } from '@material-ui/core';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { useSelector } from 'react-redux';
+import { UserState } from '../../../store/token/Reducer';
 
 function Footer(){
-    return(
-        <>
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+      );
+
+  var footerComponent;
+
+  if(token !== "") {
+  footerComponent = (
+
            <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12} >
                     <Box style={{backgroundColor: "#9b72cf",height: "52px"}}>
@@ -31,8 +40,9 @@ function Footer(){
                     </Box>
                 </Grid>
            </Grid>
-        </>
-    )
+  ); 
+  }
+  return <>{footerComponent}</>;
 }
 
 export default Footer;
