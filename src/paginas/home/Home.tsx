@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { UserState } from '../../store/token/Reducer';
 import { toast } from 'react-toastify';
+import Carrossel from "../../componentes/carrossel/Carrossel";
 
 function Home() {
     let navigate = useNavigate();
