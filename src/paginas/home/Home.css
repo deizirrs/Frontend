@@ -25,3 +25,16 @@
     background-color: hwb(267 18% 67%) !important;
     border-color: hwb(267 18% 67%) !important;
 }
+
+.imagemHome{
+    width:1350px; 
+    height:600px;
+    filter: opacity(65%); 
+
+}
+
+.imagemLogo{
+    width:110px; 
+    height:90px;
+    margin-right: 1200px;
+}
