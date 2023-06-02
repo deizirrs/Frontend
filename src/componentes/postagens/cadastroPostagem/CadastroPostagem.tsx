@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import {Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText} from "@material-ui/core";
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core";
 import "./CadastroPostagem.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Tema from "../../../models/Tema";
@@ -33,8 +33,8 @@ function CadastroPostagem() {
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
-        draggable:false,
-        theme:"colored",
+        draggable: false,
+        theme: "colored",
         progress: undefined,
       });
       navigate("/login");
@@ -51,19 +51,19 @@ function CadastroPostagem() {
     id: 0,
     titulo: "",
     texto: "",
-    data: '',
+    data: "",
     link:'',
     tema: null,
     usuario: null
   });
 
-  const[user, setUser] = useState<User>({
+  const [user, setUser] = useState<User>({
     id: +userId,
-    nomeUsuario:'',
-    usuario:'',
-    senha:'',
-    tipoUsuario:'',
-    foto:'',
+    nomeUsuario: '',
+    usuario: '',
+    senha: '',
+    tipoUsuario: '',
+    foto: '',
   })
 
   useEffect(() => {
@@ -121,8 +121,8 @@ function CadastroPostagem() {
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
-          draggable:false,
-          theme:"colored",
+          draggable: false,
+          theme: "colored",
           progress: undefined,
         });
       } catch (error: any) {
@@ -154,8 +154,8 @@ function CadastroPostagem() {
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
-          draggable:false,
-          theme:"colored",
+          draggable: false,
+          theme: "colored",
           progress: undefined,
         });
       } catch (error) {
@@ -209,7 +209,7 @@ function CadastroPostagem() {
             onChange={(e) =>
               buscaId(`/temas/${e.target.value}`, setTema, {
                 headers: {
-                  'Authorization': token,
+                  Authorization: token,
                 },
               })
             }

@@ -57,9 +57,9 @@ function ListaPostagem() {
       <>
         {
           posts.map(post => (
-            <Box m={2} >
-              <Card variant="outlined">
-                <CardContent>
+            <Box m={2} className='box'>
+              <Card variant="outlined" className='box-postagem' >
+                <CardContent className='box-postagem' >
                   <Typography color="textSecondary" gutterBottom>
                     Postagens
                   </Typography>
@@ -69,23 +69,23 @@ function ListaPostagem() {
                   <Typography variant="body2" component="p">
                     {post.texto}
                   </Typography>
-                  <Typography variant="body2" component="p">
+                  <Typography variant="body2" component="p" className='texto-tema'>
                     {post.tema?.descricao}
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Box display="flex" justifyContent="center" mb={1.5}>
+                <CardActions className='box-postagem' >
+                  <Box display="flex" justifyContent="center" mb={1.5} className='box-postagem'>
   
                     <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                       <Box mx={1}>
-                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                        <Button variant="contained" className="marginLeft button-atualizar" size='small'>
                           atualizar
                         </Button>
                       </Box>
                     </Link>
                     <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                       <Box mx={1}>
-                        <Button className="button-d" variant="contained" size='small' color="secondary">
+                        <Button className="button-d" variant="contained" size='small'>
                           deletar
                         </Button>
                       </Box>

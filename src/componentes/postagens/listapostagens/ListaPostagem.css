@@ -1,3 +1,48 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.button-d{
+    border-color: #2d2c2e  !important;
+    background-color: hwb(262 27% 66% / 0.849) !important;
+    box-shadow: 3px 3px 7px #201e24;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.button-d:hover{
+    background-color: hwb(0 8% 0% / 0.486) !important;
+    border-color: hwb(0 8% 0% / 0.596) !important;
+}
+
+.button-atualizar{
+    border-color: #643e97  !important;
+    background-color: hwb(266 30% 43%) !important;
+    box-shadow: 3px 3px 7px #6e5394;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.button-atualizar:hover{
+    background-color: hwb(145 32% 20% / 0.705) !important;
+    border-color: hwb(145 32% 20% / 0.705) !important;
+}
+
+.box-postagem{
+    background-color: #f0ebf7;
+}
+
+.texto-tema{
+    color: #330e63;
+    font-weight: bold;
+}
+
+.texto-tema:hover{
+    color: #330e63;
+    font-weight: bold !important;
+}
+
+.box{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(255, 255, 255, 0.2);  
+    border-radius: 12px; 
+}

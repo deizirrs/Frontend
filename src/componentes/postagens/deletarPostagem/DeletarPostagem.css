@@ -1,0 +1,50 @@
+.bntSim{
+    background-color: hwb(145 32% 20% / 0.705) !important;
+    border-color: hwb(145 32% 20% / 0.705) !important;
+    box-shadow: 3px 3px 7px hwb(145 28% 49% / 0.705);
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.bntSim:hover{
+    background-color:hwb(145 20% 48% / 0.616) !important;
+    border-color: hwb(145 18% 49% / 0.555) !important;
+    color:rgb(85, 218, 151) !important;
+    font-weight: bold !important;
+}
+
+.bntNao{
+    background-color: hwb(0 8% 0% / 0.486) !important;
+    border-color: hwb(0 8% 0% / 0.596) !important;
+    box-shadow: 3px 3px 7px hwb(0 29% 24% / 0.596);
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.bntNao:hover{
+    background-color: hwb(0 18% 46% / 0.747) !important;
+    border-color: hwb(0 19% 36% / 0.445) !important;
+    color: rgb(245, 22, 22) !important;
+    font-weight: bold !important;
+}
+
+.deseja-deletar{
+    color: white;
+    
+}
+
+.box-deletar{
+ background-color: rgba(53, 53, 53, 0.733);
+}
+
+.texto-postagem{
+    color: white;
+}
+
+.deseja-deletar:hover{
+    color: rgba(54, 3, 3, 0.514)
+}
+
+.texto-postagem:hover{
+    color: rgba(54, 3, 3, 0.514)
+}

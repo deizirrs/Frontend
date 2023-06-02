@@ -1,44 +1,59 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import react, { useEffect } from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { UserState } from "../../store/token/Reducer";
-import { toast } from "react-toastify";
-import Navbar from "../../componentes/estaticos/navbar/Navbar";
-import Footer from "../../componentes/estaticos/footer/Footer";
-import Carrossel from "../../componentes/carrossel/Carrossel";
+
+import { Link } from 'react-router-dom';
+
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { UserState } from '../../store/token/Reducer';
+import { toast } from 'react-toastify';
 
 function Home() {
-  return (
-    <>
-      <Grid
-      display="flex"
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        style={{ backgroundColor: "#c77dff" }}
-      >
-        <Grid >
-          <Box>
-            <Box
-              style={{ color: "white", fontWeight: "bold" }}
-            >
-                      <Grid >
-          <img
-            className="imagemLogo"
-            src="../../../src/assets/images/ufa_logo.roxo.png"
-            alt=""
-          />
-        </Grid>
-            </Box>
-          </Box>
-        </Grid>
+    let navigate = useNavigate();
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    )
 
+    useEffect(() => {
+        if (token === "") {
+            toast.error('Você precisa estar logado!!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable:false,
+                theme:"colored",
+                progress: undefined,
+              });
+            navigate("/login")
 
-      </Grid>
+        }
+    }, [token])
+
+    return (
+        <>
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "white" }}>
+                <Grid alignItems="center" item xs={6}>
+                    <Box paddingX={20} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>UFA!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "#34185c", fontWeight: "bold" }}>Encontre aqui oportunidades de crescimento!</Typography>
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                    <Link to={'/postagens'} className="textDecoration">  
+                        <Box marginRight={1}>
+                        </Box>
+                        <Button className='botao-postagem' variant="outlined">Ver Postagens</Button>
+                    </Link>    
+                    </Box>
+                </Grid>
+                <Grid item xs={6} >
+                    <img src="../../../src/assets/images/imagem1.svg" alt="logo" width="550px" height="300px" />
+                </Grid>
+                <Grid xs={12} style={{ backgroundColor: "white" }}>
+                </Grid>
+            </Grid>
 
         <Grid container style={{ marginTop: "2px" }}>
             <Grid item xs={12}>
