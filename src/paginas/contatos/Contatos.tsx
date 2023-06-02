@@ -144,7 +144,7 @@ export const Contatos = React.memo(function PostCard() {
                             classes={textCardContentStyles}
                             heading={'Olá, eu sou o Gabriel Lopes'}
                             body={
-                                'Tenho 26 anos, moro em São Paulo. Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado área de Otimização. Ja trabalhei como assitente administrativo e professor. Particularmente gosto de estudar e reolver problemas.'
+                                'Tenho 26 anos, moro em São Paulo. Sou Desenvolvedor Full Stack, formado em Matmética e atualmente finalizando mestrado área de Otimização. Ja atuei como assitente administrativo e professor. Particularmente gosto de estudar e resolver problemas.'
                             }
                         />
                     </CardContent>
@@ -172,7 +172,7 @@ export const Contatos = React.memo(function PostCard() {
                             classes={textCardContentStyles}
                             heading={'Olá, eu sou a Katarina'}
                             body={
-                                'Tenho 22 anos, moro em São Paulo. Sou Desenvolvedora FullStack, possuo experiência com  análise anti fraude e em gestão de pessoas. Sou formada em RH , pretendo ingressar na faculdade tech. Atualmente estudando inglês. Amo crescer e me desenvolver'
+                                'Tenho 22 anos, moro em São Paulo. Sou Desenvolvedora FullStack , possuo experiência com  análise anti fraude e em gestão de pessoas. Sou formada em RH , pretendo ingressar na faculdade tech. Atualmente estudando inglês. Amo crescer e me desenvolver'
                             }
                         />
                     </CardContent>
