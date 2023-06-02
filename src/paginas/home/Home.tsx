@@ -1,13 +1,7 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import react, { useEffect } from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { UserState } from "../../store/token/Reducer";
-import { toast } from "react-toastify";
-import Navbar from "../../componentes/estaticos/navbar/Navbar";
-import Footer from "../../componentes/estaticos/footer/Footer";
+
 import Carrossel from "../../componentes/carrossel/Carrossel";
 
 function Home() {

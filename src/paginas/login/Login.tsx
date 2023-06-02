@@ -52,7 +52,7 @@ function Login(){
           console.log(respUserLogin.id)
           dispatch(addToken(respUserLogin.token));
           dispatch(addId(respUserLogin.id.toString()));
-          navigate("/home");
+          navigate("/postagens");
         }
       }, [respUserLogin.token]);
 
