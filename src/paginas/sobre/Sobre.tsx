@@ -5,7 +5,7 @@ import { useState } from 'react';
 function Sobre(){
     return (    
         <>
-       <Grid container direction="row" style={{ backgroundColor: "#e1d3f5"}}>
+       <Grid container direction="row" style={{ backgroundColor: "#F4ECF7" }}>
             <Grid item xs={12}>
                 <Box paddingX={20}>
                     <Typography variant="h3" gutterBottom color="textPrimary" component="h6" align="center" style={{color: "#34185c", fontWeight: "bold"}} >Sobre</Typography>

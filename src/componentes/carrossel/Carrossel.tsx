@@ -72,6 +72,7 @@ function Carrossel() {
 
             <Box display="flex" justifyContent="center" marginTop="20px">
               <Button
+                className="botao"
                 variant="contained"
                 color="primary"
                 onClick={handleLogin}
@@ -80,6 +81,7 @@ function Carrossel() {
                 Login
               </Button>
               <Button
+                className="botao"
                 variant="contained"
                 color="secondary"
                 onClick={handleSignup}
