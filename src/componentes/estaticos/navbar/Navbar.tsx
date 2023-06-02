@@ -53,7 +53,7 @@ function Navbar() {
   if (token !== ""){
 navbarComponent = (
  
-      <AppBar position="static" style={{ backgroundColor: "#ffb3c6" }}>
+      <AppBar position="static" style={{ backgroundColor: "#996fcf" }}>
         <Toolbar variant="dense">
           <Link to="/home" className="text-decorator-none">
             <img
