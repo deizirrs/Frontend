@@ -11,6 +11,7 @@
 .entrar{
     color: #2f184b;
     font-weight: bold !important; 
+    padding-top: 9vh;
 }
 
 .entrar:hover{
@@ -53,16 +54,16 @@
 }
 
 .box-login{
-    background-color: #401c6b31;
-    border-radius: 30px;
-    width:40vh;
-    height:70vh;
-    padding-top: 20px;
-    padding-left:20px;
-    margin-bottom: 10vh;
-    margin-left: 20px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.466), -2px -2px 4px rgba(255, 255, 255, 0.219);
+    background-color: #401c6b3d;
+    border-radius: 10%;
+    height: 93.5vh;
+  padding-right: 13vh;
+  padding-left: 13vh;
+  margin-top: 4vh;
+  margin-bottom: 2.5vh;
+  margin-right: 15vh;
+  margin-left: 8vh;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466), -2.3px -2.3px 4.3px rgba(255, 255, 255, 0.219);
 }
 
 .nao-tem-conta{
